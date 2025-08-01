@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Giresse Kimona | Développeur IA & Web - AutoMarket Pro, Marketing Digital, Projets Tech Afrique</title>
+    <meta name="description" content="Portfolio de Giresse Kimona, expert en développement web, intelligence artificielle et marketing digital automation. Découvrez mes services et projets innovants.">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Giresse Kimona | Développeur IA & Web - AutoMarket Pro">
+    <meta property="og:description" content="Portfolio de Giresse Kimona, expert en développement web, intelligence artificielle et marketing digital automation. Découvrez mes services et projets innovants.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://giressekimona.com/">
+    <meta property="og:image" content="https://giressekimona.com/assets/giressekimona_image.jpg">
+    <meta property="og:locale" content="fr_FR">
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Giresse Kimona | Développeur IA & Web - AutoMarket Pro">
+    <meta name="twitter:description" content="Portfolio de Giresse Kimona, expert en développement web, intelligence artificielle et marketing digital automation.">
+    <meta name="twitter:image" content="https://giressekimona.com/assets/giressekimona_image.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Preconnect for performance: speeds up font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <!-- Preload main CSS for faster rendering -->
+    <link rel="preload" href="style.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="style.css"></noscript>
+    <!-- Structured Data: WebSite and Person (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://giressekimona.com/",
+      "name": "Giresse Kimona | Développeur IA & Web - AutoMarket Pro",
+      "description": "Portfolio de Giresse Kimona, expert en développement web, intelligence artificielle et marketing digital automation.",
+      "inLanguage": "fr-FR",
+      "publisher": {
+        "@type": "Person",
+        "name": "Giresse Kimona",
+        "jobTitle": "Développeur IA & Web, Fondateur AutoMarket Pro",
+        "image": "https://giressekimona.com/assets/giressekimona_image.jpg",
+        "url": "https://giressekimona.com/",
+        "sameAs": [
+          "https://www.facebook.com/share/1T2zuFtpN8/",
+          "https://www.instagram.com/giresse_kimona?igsh=MTN4N242cm03ZGo4aw=="
+        ]
+      }
+    }
+    </script>
+
+</head>
+<body data-theme="dark">
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">
+                <img src="assets/new-logo.png" alt="Logo de Giresse Kimona - AutoMarket Pro" class="logo-image" loading="lazy" width="48" height="48">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" data-fr="Accueil" data-en="Home">Accueil</a></li>
+                <li><a href="#about" data-fr="À propos" data-en="About">À propos</a></li>
+                <li><a href="#services" data-fr="Services" data-en="Services">Services</a></li>
+                <li><a href="#projects" data-fr="Projets" data-en="Projects">Projets</a></li>
+                <li><a href="#contact" data-fr="Contact" data-en="Contact">Contact</a></li>
+                <li><button class="theme-toggle" onclick="toggleTheme()" aria-label="Changer le thème">
+                    <i class="fas fa-moon"></i>
+                </button></li>
+                <li><button class="lang-toggle" onclick="toggleLanguage()" aria-label="Changer la langue">EN</button></li>
+            </ul>
+            <button class="mobile-menu" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text slide-in-left">
+                    <h1 data-fr="Bonjour, je suis Giresse," data-en="Hello, I'm Giresse,">Bonjour, je suis Giresse,</h1>
+                    <p class="subtitle" data-fr="Développeur & Expert IA" data-en="Developer & AI Expert">Développeur & Expert IA</p>
+                    <p class="description" data-fr="Spécialiste en développement web, intelligence artificielle et marketing digital automation. Je transforme vos idées en solutions technologiques innovantes." data-en="Specialist in web development, artificial intelligence and digital marketing automation. I transform your ideas into innovative technological solutions.">
+                        Spécialiste en développement web, intelligence artificielle et marketing digital automation. Je transforme vos idées en solutions technologiques innovantes.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i>
+                            <span data-fr="Me contacter" data-en="Contact me">Me contacter</span>
+                        </a>
+                        <a href="#projects" class="btn btn-outline">
+                            <i class="fas fa-eye"></i>
+                            <span data-fr="Voir mes projets" data-en="View my projects">Voir mes projets</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image slide-in-right">
+                    <div class="profile-card">
+                        <div class="profile-avatar">
+                        <img src="assets/giressekimona_image.jpg" alt="Portrait de Giresse Kimona, développeur IA et web" class="avatar-image" loading="lazy" width="180" height="180">
+                    </div>
+                        <h3 class="profile-name">Giresse Kimona</h3>
+                        <p class="profile-title">AutoMarket Pro</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/share/1T2zuFtpN8/" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/giresse_kimona?igsh=MTN4N242cm03ZGo4aw==" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="tel:+27697935559"><i class="fas fa-phone"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title fade-in" data-fr="À propos de moi" data-en="About me">À propos de moi</h2>
+            <div class="about-content">
+                <div class="about-text fade-in">
+                    <h3 data-fr="Qui je suis" data-en="Who I am">Qui je suis</h3>
+                    <p data-fr="Je suis Giresse Kimona, fondateur d'AutoMarket Pro, une agence spécialisée dans le marketing digital automation. Passionné par la technologie et l'innovation, je combine mes compétences en développement web, intelligence artificielle et design pour créer des solutions sur mesure." data-en="I am Giresse Kimona, founder of AutoMarket Pro, an agency specialized in digital marketing automation. Passionate about technology and innovation, I combine my skills in web development, artificial intelligence and design to create tailor-made solutions.">
+                        Je suis Giresse Kimona, fondateur d'AutoMarket Pro, une agence spécialisée dans le marketing digital automation. Passionné par la technologie et l'innovation, je combine mes compétences en développement web, intelligence artificielle et design pour créer des solutions sur mesure.
+                    </p>
+                    <p data-fr="Mon expertise s'étend du développement d'applications mobiles avec Flutter à la création de solutions web avancées, en passant par l'implémentation d'intelligence artificielle dans les processus métier." data-en="My expertise ranges from mobile application development with Flutter to creating advanced web solutions, including implementing artificial intelligence in business processes.">
+                        Mon expertise s'étend du développement d'applications mobiles avec Flutter à la création de solutions web avancées, en passant par l'implémentation d'intelligence artificielle dans les processus métier.
+                    </p>
+                </div>
+                <div class="skills-grid fade-in">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fas fa-code"></i></div>
+                        <h4 data-fr="Développement Web" data-en="Web Development">Développement Web</h4>
+                        <p data-fr="HTML, CSS, JavaScript, Python" data-en="HTML, CSS, JavaScript, Python">HTML, CSS, JavaScript, Python</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4 data-fr="Développement Mobile" data-en="Mobile Development">Développement Mobile</h4>
+                        <p data-fr="Flutter, Applications natives" data-en="Flutter, Native applications">Flutter, Applications natives</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                        <h4 data-fr="Intelligence Artificielle" data-en="Artificial Intelligence">Intelligence Artificielle</h4>
+                        <p data-fr="Machine Learning, Automation" data-en="Machine Learning, Automation">Machine Learning, Automation</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fas fa-palette"></i></div>
+                        <h4 data-fr="Design UX/UI" data-en="UX/UI Design">Design UX/UI</h4>
+                        <p data-fr="Interfaces modernes et intuitives" data-en="Modern and intuitive interfaces">Interfaces modernes et intuitives</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in" data-fr="Mes Services" data-en="My Services">Mes Services</h2>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3 data-fr="Marketing Digital" data-en="Digital Marketing">Marketing Digital</h3>
+                    <p data-fr="Stratégies de marketing automation et optimisation des campagnes digitales pour maximiser votre ROI." data-en="Marketing automation strategies and digital campaign optimization to maximize your ROI.">
+                        Stratégies de marketing automation et optimisation des campagnes digitales pour maximiser votre ROI.
+                    </p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3 data-fr="Applications Mobile" data-en="Mobile Applications">Applications Mobile</h3>
+                    <p data-fr="Développement d'applications mobiles natives et cross-platform avec Flutter pour iOS et Android." data-en="Development of native and cross-platform mobile applications with Flutter for iOS and Android.">
+                        Développement d'applications mobiles natives et cross-platform avec Flutter pour iOS et Android.
+                    </p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3 data-fr="Formation IA" data-en="AI Training">Formation IA</h3>
+                    <p data-fr="Formations spécialisées en intelligence artificielle et prompts avancés pour professionnels." data-en="Specialized training in artificial intelligence and advanced prompts for professionals.">
+                        Formations spécialisées en intelligence artificielle et prompts avancés pour professionnels.
+                    </p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><i class="fas fa-cogs"></i></div>
+                    <h3 data-fr="Consultation Tech" data-en="Tech Consulting">Consultation Tech</h3>
+                    <p data-fr="Conseils personnalisés pour l'adoption de nouvelles technologies et l'optimisation de vos processus." data-en="Personalized advice for adopting new technologies and optimizing your processes.">
+                        Conseils personnalisés pour l'adoption de nouvelles technologies et l'optimisation de vos processus.
+                    </p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><i class="fas fa-robot"></i></div>
+                    <h3 data-fr="Solutions IA" data-en="AI Solutions">Solutions IA</h3>
+                    <p data-fr="Intégration d'intelligence artificielle pour automatiser vos processus métier et améliorer l'efficacité." data-en="Integration of artificial intelligence to automate your business processes and improve efficiency.">
+                        Intégration d'intelligence artificielle pour automatiser vos processus métier et améliorer l'efficacité.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title fade-in" data-fr="Mes Projets" data-en="My Projects">Mes Projets</h2>
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>JobFinder Congo</h3>
+                        <p data-fr="Plateforme de recherche d'emploi au Congo avec matching intelligent et notifications en temps réel." data-en="Job search platform in Congo with intelligent matching and real-time notifications.">
+                            Plateforme de recherche d'emploi au Congo avec matching intelligent et notifications en temps réel.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">AI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" data-project="JobFinder Congo" data-fr="Voir le projet" data-en="View project">Voir le projet</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Congo Delivery</h3>
+                        <p data-fr="Application de livraison rapide avec géolocalisation et suivi en temps réel des commandes." data-en="Fast delivery application with geolocation and real-time order tracking.">
+                            Application de livraison rapide avec géolocalisation et suivi en temps réel des commandes.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Maps API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" data-project="Congo Delivery" data-fr="Voir le projet" data-en="View project">Voir le projet</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Congo Food</h3>
+                        <p data-fr="Plateforme de commande de nourriture locale avec recommandations personnalisées par IA." data-en="Local food ordering platform with AI-powered personalized recommendations.">
+                            Plateforme de commande de nourriture locale avec recommandations personnalisées par IA.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">ML</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" data-project="Congo Food" data-fr="Voir le projet" data-en="View project">Voir le projet</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Mboka Wallet</h3>
+                        <p data-fr="Portefeuille électronique sécurisé pour les transactions financières mobiles en Afrique." data-en="Secure electronic wallet for mobile financial transactions in Africa.">
+                            Portefeuille électronique sécurisé pour les transactions financières mobiles en Afrique.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Blockchain</span>
+                            <span class="tech-tag">Security</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" data-project="Mboka Wallet" data-fr="Voir le projet" data-en="View project">Voir le projet</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Secure Pay Trust</h3>
+                        <p data-fr="Solution de paiement sécurisé avec authentification biométrique et chiffrement avancé." data-en="Secure payment solution with biometric authentication and advanced encryption.">
+                            Solution de paiement sécurisé avec authentification biométrique et chiffrement avancé.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Cryptography</span>
+                            <span class="tech-tag">Biometrics</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" data-project="Secure Pay Trust" data-fr="Voir le projet" data-en="View project">Voir le projet</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-fr="E-book IA Avancée" data-en="Advanced AI E-book">E-book IA Avancée</h3>
+                        <p data-fr="Guide complet 'Maîtrise des Prompts IA Avancés 2025' pour professionnels et développeurs." data-en="Complete guide 'Advanced AI Prompts Mastery 2025' for professionals and developers.">
+                            Guide complet "Maîtrise des Prompts IA Avancés 2025" pour professionnels et développeurs.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">AI</span>
+                            <span class="tech-tag">Education</span>
+                            <span class="tech-tag">Digital</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://poweragencyplaton.systeme.io/e4bd674a" target="_blank" rel="noopener" data-fr="Acheter" data-en="Buy">Acheter</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in" data-fr="Me Contacter" data-en="Contact Me">Me Contacter</h2>
+            <div class="contact-content">
+                <div class="contact-info fade-in">
+                    <h3 data-fr="Parlons de votre projet" data-en="Let's talk about your project">Parlons de votre projet</h3>
+                    <p data-fr="Prêt à transformer vos idées en réalité ? Contactez-moi pour discuter de votre projet et découvrir comment je peux vous aider." data-en="Ready to transform your ideas into reality? Contact me to discuss your project and discover how I can help you.">
+                        Prêt à transformer vos idées en réalité ? Contactez-moi pour discuter de votre projet et découvrir comment je peux vous aider.
+                    </p>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+27 69 793 5559</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contact@giressekimona.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span data-fr="Afrique du Sud" data-en="South Africa">Afrique du Sud</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-facebook"></i>
+                        <a href="https://www.facebook.com/share/1T2zuFtpN8/" target="_blank">Facebook</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-instagram"></i>
+                        <a href="https://www.instagram.com/giresse_kimona?igsh=MTN4N242cm03ZGo4aw==" target="_blank">Instagram</a>
+                    </div>
+                </div>
+                <div class="contact-form fade-in">
+                    <form id="contact-form" action="https://formspree.io/f/meozqkqa" method="POST">
+                        <div class="form-group">
+                            <label for="name" data-fr="Nom complet" data-en="Full name">Nom complet</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-fr="Email" data-en="Email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-fr="Message" data-en="Message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i>
+                            <span data-fr="Envoyer le message" data-en="Send message">Envoyer le message</span>
+                        </button>
+                        <div id="form-feedback" style="margin-top:1rem;"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>AutoMarket Pro</h4>
+                    <p data-fr="Agence spécialisée dans le marketing digital automation et le développement de solutions technologiques innovantes." data-en="Agency specialized in digital marketing automation and development of innovative technological solutions.">
+                        Agence spécialisée dans le marketing digital automation et le développement de solutions technologiques innovantes.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-fr="Services" data-en="Services">Services</h4>
+                    <p><a href="#services" data-fr="Développement Web" data-en="Web Development">Développement Web</a></p>
+                    <p><a href="#services" data-fr="Solutions IA" data-en="AI Solutions">Solutions IA</a></p>
+                    <p><a href="#services" data-fr="Marketing Digital" data-en="Digital Marketing">Marketing Digital</a></p>
+                    <p><a href="#services" data-fr="Formation" data-en="Training">Formation</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-fr="Contact" data-en="Contact">Contact</h4>
+                    <p>+27 69 793 5559</p>
+                    <p>contact@giressekimona.com</p>
+                    <p><a href="https://www.facebook.com/share/1T2zuFtpN8/" target="_blank">Facebook</a></p>
+                    <p><a href="https://www.instagram.com/giresse_kimona?igsh=MTN4N242cm03ZGo4aw==" target="_blank">Instagram</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Giresse Kimona - AutoMarket Pro. <span data-fr="Tous droits réservés." data-en="All rights reserved.">Tous droits réservés.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Defer non-critical scripts for performance -->
+    <script defer>
+        // Enhanced Theme and Language Management
+        let currentTheme = localStorage.getItem('theme') || 'dark';
+        let currentLang = localStorage.getItem('language') || 'fr';
+
+        // Initialize theme and language on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeTheme();
+            initializeLanguage();
+            initializeAnimations();
+            initializeScrollEffects();
+            initializeFormHandling();
+            initializeMobileMenu();
+            initializeAccessibility();
+        });
+
+        function initializeTheme() {
+            document.body.setAttribute('data-theme', currentTheme);
+            const themeIcon = document.querySelector('.theme-toggle i');
+            themeIcon.className = currentTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        }
+
+        function initializeLanguage() {
+            const langButton = document.querySelector('.lang-toggle');
+            langButton.textContent = currentLang === 'fr' ? 'EN' : 'FR';
+            updateLanguageContent();
+        }
+
+        function toggleTheme() {
+            currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            localStorage.setItem('theme', currentTheme);
+            document.body.setAttribute('data-theme', currentTheme);
+            
+            const themeIcon = document.querySelector('.theme-toggle i');
+            themeIcon.className = currentTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+            
+            // Add theme transition effect
+            document.body.style.transition = 'all 0.3s ease';
+            setTimeout(() => {
+                document.body.style.transition = '';
+            }, 300);
+        }
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'fr' ? 'en' : 'fr';
+            localStorage.setItem('language', currentLang);
+            const langButton = document.querySelector('.lang-toggle');
+            langButton.textContent = currentLang === 'fr' ? 'EN' : 'FR';
+            updateLanguageContent();
+        }
+
+        function updateLanguageContent() {
+            const elements = document.querySelectorAll('[data-fr][data-en]');
+            elements.forEach(element => {
+                element.textContent = element.getAttribute(`data-${currentLang}`);
+            });
+        }
+
+        // Enhanced Smooth Scrolling
+        function initializeSmoothScrolling() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        const headerHeight = document.querySelector('.header').offsetHeight;
+                        const targetPosition = target.offsetTop - headerHeight - 20;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        }
+
+        // Enhanced Scroll Animations
+        function initializeAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // Enhanced Scroll Effects
+        function initializeScrollEffects() {
+            let ticking = false;
+
+            function updateScrollEffects() {
+                const scrolled = window.pageYOffset;
+                const header = document.querySelector('.header');
+                const scrollProgress = document.querySelector('.scroll-indicator');
+                
+                // Header background effect
+                if (scrolled > 100) {
+                    header.style.background = currentTheme === 'dark' 
+                        ? 'rgba(15, 23, 42, 0.98)' 
+                        : 'rgba(255, 255, 255, 0.98)';
+                    header.style.backdropFilter = 'blur(20px)';
+                } else {
+                    header.style.background = currentTheme === 'dark' 
+                        ? 'rgba(15, 23, 42, 0.95)' 
+                        : 'rgba(255, 255, 255, 0.95)';
+                    header.style.backdropFilter = 'blur(10px)';
+                }
+
+                // Scroll progress indicator
+                if (scrollProgress) {
+                    const scrollPercent = (scrolled / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+                    scrollProgress.style.width = scrollPercent + '%';
+                }
+
+                // Parallax effect (only on desktop)
+                if (!isMobile()) {
+                    const hero = document.querySelector('.hero');
+                    if (hero && scrolled < window.innerHeight) {
+                        const rate = scrolled * -0.3;
+                        hero.style.transform = `translateY(${rate}px)`;
+                    }
+                }
+
+                ticking = false;
+            }
+
+            function requestTick() {
+                if (!ticking) {
+                    requestAnimationFrame(updateScrollEffects);
+                    ticking = true;
+                }
+            }
+
+            window.addEventListener('scroll', requestTick);
+        }
+
+        // Replace initializeFormHandling with Formspree AJAX feedback
+        function initializeFormHandling() {
+            const form = document.getElementById('contact-form');
+            const feedback = document.getElementById('form-feedback');
+            if (!form) return;
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                feedback.textContent = '';
+                const formData = new FormData(form);
+                const submitButton = form.querySelector('button[type="submit"]');
+                const originalText = submitButton.innerHTML;
+                submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span data-fr="Envoi..." data-en="Sending...">Envoi...</span>';
+                submitButton.disabled = true;
+                submitButton.style.opacity = '0.7';
+                try {
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: { 'Accept': 'application/json' }
+                    });
+                    if (response.ok) {
+                        feedback.textContent = 'Message envoyé avec succès !';
+                        feedback.style.color = '#10b981';
+                        form.reset();
+                    } else {
+                        const errorData = await response.json();
+                        feedback.textContent = errorData.error || 'Failed to send message, please try again';
+                        feedback.style.color = '#ef4444';
+                    }
+                } catch (error) {
+                    feedback.textContent = 'Failed to send message, please try again';
+                    feedback.style.color = '#ef4444';
+                } finally {
+                    submitButton.innerHTML = originalText;
+                    submitButton.disabled = false;
+                    submitButton.style.opacity = '1';
+                }
+            });
+        }
+
+        // Enhanced Mobile Menu
+        function initializeMobileMenu() {
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (!mobileMenu || !navLinks) return;
+
+            mobileMenu.addEventListener('click', function() {
+                navLinks.classList.toggle('open');
+                this.setAttribute('aria-expanded', navLinks.classList.contains('open'));
+                
+                // Prevent body scroll when menu is open
+                if (navLinks.classList.contains('open')) {
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!mobileMenu.contains(e.target) && !navLinks.contains(e.target)) {
+                    navLinks.classList.remove('open');
+                    mobileMenu.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Close menu when clicking on a link
+            const navLinksItems = document.querySelectorAll('.nav-links a');
+            navLinksItems.forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('open');
+                    mobileMenu.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                });
+            });
+        }
+
+        // Enhanced Accessibility
+        function initializeAccessibility() {
+            // Add skip to content link
+            const skipLink = document.createElement('a');
+            skipLink.href = '#home';
+            skipLink.textContent = 'Skip to content';
+            skipLink.className = 'skip-link';
+            skipLink.style.cssText = `
+                position: absolute;
+                top: -40px;
+                left: 6px;
+                background: var(--primary-color);
+                color: white;
+                padding: 8px;
+                text-decoration: none;
+                border-radius: 4px;
+                z-index: 10000;
+                transition: top 0.3s;
+            `;
+            document.body.insertBefore(skipLink, document.body.firstChild);
+
+            skipLink.addEventListener('focus', () => {
+                skipLink.style.top = '6px';
+            });
+
+            skipLink.addEventListener('blur', () => {
+                skipLink.style.top = '-40px';
+            });
+
+            // Enhanced keyboard navigation
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    const navLinks = document.querySelector('.nav-links');
+                    if (navLinks.classList.contains('open')) {
+                        navLinks.classList.remove('open');
+                        document.body.style.overflow = '';
+                    }
+                }
+            });
+        }
+
+        // Enhanced Typing Effect
+        function initializeTypingEffect() {
+            const heroTitle = document.querySelector('.hero-text h1');
+            if (heroTitle) {
+                const originalText = heroTitle.textContent;
+                typeWriter(heroTitle, originalText, 80);
+            }
+        }
+
+        function typeWriter(element, text, speed = 100) {
+            let i = 0;
+            element.innerHTML = '';
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
+        // Enhanced Floating Animation
+        function initializeFloatingAnimation() {
+            const profileCard = document.querySelector('.profile-card');
+            if (profileCard) {
+                let direction = 1;
+                let currentY = 0;
+                
+                function animate() {
+                    currentY += 0.5 * direction;
+                    if (currentY > 10) direction = -1;
+                    if (currentY < -10) direction = 1;
+                    
+                    profileCard.style.transform = `translateY(${currentY}px)`;
+                    requestAnimationFrame(animate);
+                }
+                animate();
+            }
+        }
+
+        // Enhanced Hover Effects
+        function initializeHoverEffects() {
+            // Skill cards hover effect
+            document.querySelectorAll('.skill-card, .service-card, .project-card').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+
+            // Button click effects
+            document.querySelectorAll('.btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 150);
+                });
+            });
+        }
+
+        // Enhanced Notification System
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = `notification notification-${type}`;
+            notification.textContent = message;
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                padding: 1rem 1.5rem;
+                border-radius: 8px;
+                color: white;
+                font-weight: 500;
+                z-index: 10000;
+                transform: translateX(100%);
+                transition: transform 0.3s ease;
+                max-width: 300px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            `;
+
+            if (type === 'success') {
+                notification.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+            } else if (type === 'error') {
+                notification.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+            } else {
+                notification.style.background = 'linear-gradient(135deg, #3b82f6, #2563eb)';
+            }
+
+            document.body.appendChild(notification);
+
+            // Animate in
+            setTimeout(() => {
+                notification.style.transform = 'translateX(0)';
+            }, 100);
+
+            // Remove after 5 seconds
+            setTimeout(() => {
+                notification.style.transform = 'translateX(100%)';
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 300);
+            }, 5000);
+        }
+
+        // Project link click handler
+        function initializeProjectLinks() {
+            document.querySelectorAll('.project-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const projectName = this.getAttribute('data-project');
+                    const message = currentLang === 'fr'
+                        ? `Heureux de discuter de ce projet : ${projectName}.`
+                        : `Happy to discuss this project: ${projectName}.`;
+                    showNotification(message, 'success');
+                });
+            });
+        }
+
+        // Utility Functions
+        function isMobile() {
+            return window.innerWidth <= 768;
+        }
+
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        // Initialize all features
+        window.addEventListener('load', function() {
+            initializeSmoothScrolling();
+            initializeTypingEffect();
+            initializeFloatingAnimation();
+            initializeHoverEffects();
+            initializeProjectLinks();
+            
+            // Add scroll indicator
+            const scrollProgress = document.createElement('div');
+            scrollProgress.className = 'scroll-indicator';
+            document.body.appendChild(scrollProgress);
+        });
+
+        // Enhanced window resize handling
+        window.addEventListener('resize', debounce(function() {
+            // Reinitialize mobile-specific features
+            if (isMobile()) {
+                const navLinks = document.querySelector('.nav-links');
+                if (navLinks) {
+                    navLinks.classList.remove('open');
+                    document.body.style.overflow = '';
+                }
+            }
+        }, 250));
+
+        // Enhanced performance monitoring
+        if ('performance' in window) {
+            window.addEventListener('load', function() {
+                setTimeout(function() {
+                    const perfData = performance.getEntriesByType('navigation')[0];
+                    console.log('Page load time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
+                }, 0);
+            });
+        }
+    </script>
+
+    <!-- Google tag (gtag.js) will be loaded after cookie consent -->
+
+    <!-- Cookie Consent Banner (Dismissible, Close X Button, Professional Design) -->
+    <style>
+    #cookie-consent-banner {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #18181b;
+      color: #fff;
+      padding: 1.5rem 2rem 1.2rem 2rem;
+      z-index: 99999;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+      font-family: 'Poppins', Arial, sans-serif;
+      font-size: 1rem;
+      border-radius: 16px;
+      min-width: 320px;
+      max-width: 95vw;
+      transition: transform 0.3s, opacity 0.3s;
+      opacity: 1;
+    }
+    #cookie-consent-banner.hide {
+      opacity: 0;
+      pointer-events: none;
+      transform: translateX(-50%) translateY(40px);
+    }
+    #cookie-consent-banner .cookie-text {
+      flex: 1 1 260px;
+      margin-right: 1.5rem;
+      min-width: 200px;
+      line-height: 1.6;
+    }
+    #cookie-consent-banner .cookie-close {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 50%;
+      width: 2.2rem;
+      height: 2.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+    #cookie-consent-banner .cookie-close:hover, #cookie-consent-banner .cookie-close:focus {
+      background: rgba(255,255,255,0.12);
+      outline: 2px solid #fff;
+      outline-offset: 2px;
+    }
+    @media (max-width: 600px) {
+      #cookie-consent-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 0.97rem;
+        padding: 1.2rem 1rem 1rem 1rem;
+        min-width: 0;
+      }
+      #cookie-consent-banner .cookie-text {
+        margin-right: 0;
+        margin-bottom: 0.7rem;
+      }
+      #cookie-consent-banner .cookie-close {
+        align-self: flex-end;
+        margin-bottom: 0.5rem;
+      }
+    }
+    </style>
+    <div id="cookie-consent-banner" style="display:none;">
+      <span class="cookie-text">
+        This website uses cookies for personalization and analytics. <br>
+        <span style="font-size:0.95em;opacity:0.8;">By continuing to browse, you agree to our use of cookies. <a href="#" style="color:#10b981;text-decoration:underline;">Learn more</a>.</span>
+      </span>
+      <button class="cookie-close" id="cookie-close-btn" aria-label="Close cookie banner">&times;</button>
+    </div>
+    <script>
+    (function() {
+      const banner = document.getElementById('cookie-consent-banner');
+      const closeBtn = document.getElementById('cookie-close-btn');
+      const CONSENT_KEY = 'cookie_banner_closed';
+
+      function showBannerIfNeeded() {
+        const closed = localStorage.getItem(CONSENT_KEY);
+        if (!closed) {
+          banner.style.display = 'flex';
+          setTimeout(() => banner.classList.remove('hide'), 10);
+        } else {
+          banner.classList.add('hide');
+        }
+      }
+
+      closeBtn.onclick = function() {
+        localStorage.setItem(CONSENT_KEY, 'yes');
+        banner.classList.add('hide');
+      };
+
+      document.addEventListener('DOMContentLoaded', showBannerIfNeeded);
+    })();
+    </script>
+    <!-- End Cookie Consent Banner -->
+</body>
+</html>
