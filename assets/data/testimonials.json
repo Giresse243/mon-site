@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "Marie Dubois",
+    "title": "CEO",
+    "company": "TechStart Congo",
+    "avatar": "MD",
+    "rating": 5,
+    "content": "Giresse a transformé notre vision en une application mobile exceptionnelle. Son expertise en Flutter et son approche professionnelle ont dépassé nos attentes. Je recommande vivement ses services.",
+    "project": "Application Mobile E-commerce",
+    "date": "2024-12"
+  },
+  {
+    "id": 2,
+    "name": "Jean-Paul Mukendi",
+    "title": "Directeur Marketing",
+    "company": "Digital Solutions RDC",
+    "avatar": "JPM",
+    "rating": 5,
+    "content": "L'intégration d'IA dans nos processus marketing par Giresse a augmenté notre efficacité de 300%. Un vrai expert qui comprend les besoins business et les traduit en solutions techniques.",
+    "project": "Système d'Automation Marketing",
+    "date": "2024-11"
+  },
+  {
+    "id": 3,
+    "name": "Sarah Thompson",
+    "title": "Product Manager",
+    "company": "InnovateTech",
+    "avatar": "ST",
+    "rating": 5,
+    "content": "Working with Giresse was a game-changer for our startup. His AI solutions helped us automate our customer service, reducing response time by 80% and improving customer satisfaction significantly.",
+    "project": "AI Chatbot Integration",
+    "date": "2024-10"
+  },
+  {
+    "id": 4,
+    "name": "David Kalonji",
+    "title": "Founder",
+    "company": "EcoSolutions Africa",
+    "avatar": "DK",
+    "rating": 5,
+    "content": "Le site web développé par Giresse pour notre ONG a vraiment fait la différence. Design moderne, performance optimale et fonctionnalités sur mesure. Un travail d'expert !",
+    "project": "Site Web Institutionnel",
+    "date": "2024-09"
+  },
+  {
+    "id": 5,
+    "name": "Lisa Chen",
+    "title": "CTO",
+    "company": "DataFlow Systems",
+    "avatar": "LC",
+    "rating": 5,
+    "content": "Giresse's expertise in both web development and AI integration made him the perfect choice for our complex data visualization project. Professional, reliable, and highly skilled.",
+    "project": "Data Visualization Dashboard",
+    "date": "2024-08"
+  },
+  {
+    "id": 6,
+    "name": "Michel Bakoma",
+    "title": "Directeur Commercial",
+    "company": "CommerceFirst",
+    "avatar": "MB",
+    "rating": 5,
+    "content": "Notre plateforme e-commerce développée par Giresse a triplé nos ventes en ligne en 6 mois. Interface intuitive, système de paiement sécurisé et performance exceptionnelle.",
+    "project": "Plateforme E-commerce",
+    "date": "2024-07"
+  }
+]

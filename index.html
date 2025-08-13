@@ -65,6 +65,7 @@
                 <li><a href="#about" data-fr="À propos" data-en="About">À propos</a></li>
                 <li><a href="#services" data-fr="Services" data-en="Services">Services</a></li>
                 <li><a href="#projects" data-fr="Projets" data-en="Projects">Projets</a></li>
+                <li><a href="#testimonials" data-fr="Témoignages" data-en="Testimonials">Témoignages</a></li>
                 <li><a href="#contact" data-fr="Contact" data-en="Contact">Contact</a></li>
                 <li><button class="theme-toggle" onclick="toggleTheme()" aria-label="Changer le thème">
                     <i class="fas fa-moon"></i>
@@ -152,6 +153,9 @@
                         <p data-fr="Interfaces modernes et intuitives" data-en="Modern and intuitive interfaces">Interfaces modernes et intuitives</p>
                     </div>
                 </div>
+                
+                <!-- Advanced Skills Progress Component -->
+                <div id="skills-container" class="fade-in" style="margin-top: 3rem;"></div>
             </div>
         </div>
     </section>
@@ -320,6 +324,14 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in" data-fr="Témoignages Clients" data-en="Client Testimonials">Témoignages Clients</h2>
+            <div id="testimonials-container" class="fade-in"></div>
         </div>
     </section>
 
@@ -962,5 +974,25 @@
     })();
     </script>
     <!-- End Cookie Consent Banner -->
+    
+    <!-- Load Components -->
+    <script src="components/skill-progress.js"></script>
+    <script src="components/testimonial-carousel.js"></script>
+    <script>
+        // Initialize components when DOM is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize skill progress component if container exists
+            const skillsContainer = document.getElementById('skills-container');
+            if (skillsContainer) {
+                new SkillProgress('skills-container');
+            }
+            
+            // Initialize testimonial carousel if container exists
+            const testimonialsContainer = document.getElementById('testimonials-container');
+            if (testimonialsContainer) {
+                new TestimonialCarousel('testimonials-container');
+            }
+        });
+    </script>
 </body>
 </html>

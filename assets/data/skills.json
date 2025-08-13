@@ -1,0 +1,88 @@
+{
+  "categories": [
+    {
+      "id": "frontend",
+      "name": "Frontend",
+      "icon": "fas fa-code",
+      "skills": [
+        { "name": "HTML/CSS", "proficiency": 95, "years": 5, "certifications": [] },
+        { "name": "JavaScript", "proficiency": 90, "years": 5, "certifications": [] },
+        { "name": "React", "proficiency": 85, "years": 3, "certifications": [] },
+        { "name": "Vue.js", "proficiency": 80, "years": 2, "certifications": [] },
+        { "name": "TypeScript", "proficiency": 78, "years": 2, "certifications": [] },
+        { "name": "Tailwind CSS", "proficiency": 88, "years": 3, "certifications": [] },
+        { "name": "Bootstrap", "proficiency": 85, "years": 4, "certifications": [] },
+        { "name": "SASS/SCSS", "proficiency": 82, "years": 3, "certifications": [] }
+      ]
+    },
+    {
+      "id": "backend",
+      "name": "Backend",
+      "icon": "fas fa-server",
+      "skills": [
+        { "name": "Node.js", "proficiency": 88, "years": 4, "certifications": [] },
+        { "name": "Python", "proficiency": 92, "years": 5, "certifications": [] },
+        { "name": "PHP", "proficiency": 75, "years": 3, "certifications": [] },
+        { "name": "PostgreSQL", "proficiency": 85, "years": 4, "certifications": [] },
+        { "name": "MongoDB", "proficiency": 80, "years": 3, "certifications": [] },
+        { "name": "Express.js", "proficiency": 85, "years": 4, "certifications": [] },
+        { "name": "Django", "proficiency": 78, "years": 2, "certifications": [] },
+        { "name": "FastAPI", "proficiency": 82, "years": 2, "certifications": [] }
+      ]
+    },
+    {
+      "id": "mobile",
+      "name": "Mobile",
+      "icon": "fas fa-mobile-alt",
+      "skills": [
+        { "name": "Flutter", "proficiency": 85, "years": 3, "certifications": [] },
+        { "name": "React Native", "proficiency": 75, "years": 2, "certifications": [] },
+        { "name": "Dart", "proficiency": 80, "years": 3, "certifications": [] },
+        { "name": "iOS Development", "proficiency": 65, "years": 1, "certifications": [] },
+        { "name": "Android Development", "proficiency": 70, "years": 2, "certifications": [] }
+      ]
+    },
+    {
+      "id": "ai",
+      "name": "Intelligence Artificielle",
+      "icon": "fas fa-brain",
+      "skills": [
+        { "name": "Machine Learning", "proficiency": 88, "years": 4, "certifications": [] },
+        { "name": "TensorFlow", "proficiency": 82, "years": 3, "certifications": [] },
+        { "name": "PyTorch", "proficiency": 78, "years": 2, "certifications": [] },
+        { "name": "OpenAI API", "proficiency": 90, "years": 2, "certifications": [] },
+        { "name": "Natural Language Processing", "proficiency": 85, "years": 3, "certifications": [] },
+        { "name": "Computer Vision", "proficiency": 75, "years": 2, "certifications": [] },
+        { "name": "Deep Learning", "proficiency": 80, "years": 3, "certifications": [] }
+      ]
+    },
+    {
+      "id": "devops",
+      "name": "DevOps & Cloud",
+      "icon": "fas fa-cloud",
+      "skills": [
+        { "name": "Docker", "proficiency": 85, "years": 3, "certifications": [] },
+        { "name": "AWS", "proficiency": 80, "years": 3, "certifications": [] },
+        { "name": "Git/GitHub", "proficiency": 92, "years": 5, "certifications": [] },
+        { "name": "Netlify", "proficiency": 88, "years": 4, "certifications": [] },
+        { "name": "Vercel", "proficiency": 85, "years": 3, "certifications": [] },
+        { "name": "Linux", "proficiency": 78, "years": 4, "certifications": [] },
+        { "name": "CI/CD", "proficiency": 75, "years": 2, "certifications": [] }
+      ]
+    },
+    {
+      "id": "marketing",
+      "name": "Marketing Digital",
+      "icon": "fas fa-chart-line",
+      "skills": [
+        { "name": "SEO/SEM", "proficiency": 88, "years": 4, "certifications": [] },
+        { "name": "Google Analytics", "proficiency": 85, "years": 4, "certifications": [] },
+        { "name": "Social Media Marketing", "proficiency": 90, "years": 5, "certifications": [] },
+        { "name": "Email Marketing", "proficiency": 85, "years": 4, "certifications": [] },
+        { "name": "Content Marketing", "proficiency": 80, "years": 3, "certifications": [] },
+        { "name": "Marketing Automation", "proficiency": 92, "years": 4, "certifications": [] },
+        { "name": "Facebook Ads", "proficiency": 88, "years": 4, "certifications": [] }
+      ]
+    }
+  ]
+}
