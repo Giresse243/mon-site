@@ -1,0 +1,13 @@
+{
+  "nav": {"home": "Accueil", "about": "À propos", "services": "Services", "projects": "Projets", "gallery": "Galerie", "contact": "Contact"},
+  "hero": {
+    "title": "Bonjour, je suis Giresse,",
+    "subtitle": "Développeur & Expert IA",
+    "description": "Spécialiste en développement web, intelligence artificielle et marketing digital automation. Je transforme vos idées en solutions technologiques innovantes.",
+    "ctaPrimary": "Me contacter",
+    "ctaSecondary": "Voir mes projets"
+  },
+  "about": {"title": "À propos de moi", "who": "Qui je suis"}
+  ,
+  "services": {"title": "Mes Services"}
+}

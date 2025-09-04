@@ -1,0 +1,50 @@
+[
+  {
+    "src": "assets/gallery/sample-1.jpg",
+    "title": "Projet Mobile",
+    "alt": "Capture d'écran projet mobile",
+    "tags": ["Flutter", "Mobile"],
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "src": "assets/gallery/sample-2.jpg",
+    "title": "Dashboard Web",
+    "alt": "Interface dashboard web",
+    "tags": ["React", "UI"],
+    "width": 1600,
+    "height": 1000
+  },
+  {
+    "src": "assets/gallery/sample-3.jpg",
+    "title": "Branding",
+    "alt": "Identité visuelle",
+    "tags": ["Design", "Brand"],
+    "width": 1400,
+    "height": 933
+  },
+  {
+    "src": "assets/gallery/sample-4.jpg",
+    "title": "Site Vitrine",
+    "alt": "Page d'accueil site vitrine",
+    "tags": ["Next.js", "SEO"],
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "assets/gallery/sample-5.jpg",
+    "title": "E-commerce",
+    "alt": "Catalogue e-commerce",
+    "tags": ["Shop", "UX"],
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "src": "assets/gallery/sample-6.jpg",
+    "title": "Data Viz",
+    "alt": "Graphiques de données",
+    "tags": ["Analytics", "Charts"],
+    "width": 1600,
+    "height": 900
+  }
+]
