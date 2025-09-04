@@ -65,6 +65,7 @@
                 <li><a href="#about" data-fr="À propos" data-en="About">À propos</a></li>
                 <li><a href="#services" data-fr="Services" data-en="Services">Services</a></li>
                 <li><a href="#projects" data-fr="Projets" data-en="Projects">Projets</a></li>
+                <li><a href="#gallery" data-fr="Galerie" data-en="Gallery">Galerie</a></li>
                 <li><a href="#contact" data-fr="Contact" data-en="Contact">Contact</a></li>
                 <li><button class="theme-toggle" onclick="toggleTheme()" aria-label="Changer le thème">
                     <i class="fas fa-moon"></i>
@@ -323,6 +324,14 @@
         </div>
     </section>
 
+    <!-- Gallery Section -->
+    <section id="gallery" class="section gallery">
+        <div class="container">
+            <h2 class="section-title fade-in" data-fr="Galerie" data-en="Gallery">Galerie</h2>
+            <div id="gallery-grid" class="gallery-grid fade-in" aria-live="polite"></div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="section">
         <div class="container">
@@ -425,6 +434,7 @@
             initializeFormHandling();
             initializeMobileMenu();
             initializeAccessibility();
+            initializeGallery();
         });
 
         function initializeTheme() {
@@ -814,6 +824,68 @@
                     document.body.removeChild(notification);
                 }, 300);
             }, 5000);
+        }
+
+        // Gallery module
+        async function initializeGallery() {
+            const grid = document.getElementById('gallery-grid');
+            if (!grid) return;
+
+            try {
+                const res = await fetch('/assets/data/gallery.json', { cache: 'no-store' });
+                const items = await res.json();
+                renderGallery(grid, items);
+            } catch (e) {
+                console.error('Gallery load error:', e);
+                renderGallery(grid, []);
+            }
+        }
+
+        function renderGallery(container, items) {
+            if (!items || items.length === 0) {
+                container.innerHTML = `<div class="gallery-empty" data-fr="Ajoutez vos images dans assets/gallery et mettez à jour assets/data/gallery.json" data-en="Add your images in assets/gallery and update assets/data/gallery.json">Ajoutez vos images dans assets/gallery et mettez à jour assets/data/gallery.json</div>`;
+                return;
+            }
+
+            const html = items.map(item => renderGalleryItem(item)).join('');
+            container.innerHTML = html;
+
+            // Image loading enhancements
+            container.querySelectorAll('img[data-src]').forEach(img => {
+                // Native lazy loading
+                img.src = img.dataset.src;
+                img.addEventListener('load', () => {
+                    img.classList.remove('img-blur');
+                    img.parentElement?.classList.remove('img-skeleton');
+                });
+                img.addEventListener('error', () => {
+                    const fallback = document.createElement('div');
+                    fallback.className = 'gallery-fallback';
+                    fallback.textContent = img.alt || 'Image';
+                    img.replaceWith(fallback);
+                });
+            });
+        }
+
+        function renderGalleryItem(item) {
+            const title = item.title || '';
+            const alt = item.alt || title || 'Gallery image';
+            const tags = Array.isArray(item.tags) ? item.tags.slice(0, 3) : [];
+            const ratio = (item.width && item.height) ? (item.width + ' / ' + item.height) : '4 / 3';
+            return `
+            <figure class="gallery-item img-skeleton" style="aspect-ratio:${ratio}">
+                <img class="gallery-img img-blur" data-src="${item.src}" alt="${escapeHtml(alt)}" loading="lazy" decoding="async" />
+                <figcaption class="gallery-overlay">
+                    <div class="gallery-meta">
+                        <h4>${escapeHtml(title)}</h4>
+                        ${tags.length ? `<div class="gallery-tags">${tags.map(t => `<span class=\"tag\">${escapeHtml(t)}</span>`).join('')}</div>` : ''}
+                    </div>
+                </figcaption>
+            </figure>`;
+        }
+
+        function escapeHtml(str) {
+            return String(str).replace(/[&<>"]+/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[s]));
         }
 
         // Project link click handler
