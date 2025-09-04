@@ -1396,6 +1396,12 @@ body {
     transition: width var(--transition-fast);
 }
 
+/* Performance: content-visibility for below-the-fold sections */
+.cv-auto {
+    content-visibility: auto;
+    contain-intrinsic-size: 1000px 800px; /* reserve space to prevent layout shift */
+}
+
 /* Loading animation for images */
 .image-loading {
     background: linear-gradient(90deg, var(--bg-secondary) 25%, var(--bg-primary) 50%, var(--bg-secondary) 75%);

@@ -21,6 +21,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <!-- Preload hero image for faster LCP -->
+    <link rel="preload" as="image" href="assets/giressekimona_image.jpg" imagesrcset="assets/giressekimona_image.jpg 1x" imagesizes="(max-width: 768px) 40vw, 180px">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <!-- Preconnect for performance: speeds up font loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -82,6 +84,7 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
+                <!-- Hero copy -->
                 <div class="hero-text slide-in-left">
                     <h1 data-fr="Bonjour, je suis Giresse," data-en="Hello, I'm Giresse,">Bonjour, je suis Giresse,</h1>
                     <p class="subtitle" data-fr="Développeur & Expert IA" data-en="Developer & AI Expert">Développeur & Expert IA</p>
@@ -99,10 +102,11 @@
                         </a>
                     </div>
                 </div>
+                <!-- Hero profile card -->
                 <div class="hero-image slide-in-right">
                     <div class="profile-card">
                         <div class="profile-avatar">
-                        <img src="assets/giressekimona_image.jpg" alt="Portrait de Giresse Kimona, développeur IA et web" class="avatar-image" loading="lazy" width="180" height="180">
+                        <img src="assets/giressekimona_image.jpg" alt="Portrait de Giresse Kimona, développeur IA et web" class="avatar-image" loading="eager" fetchpriority="high" width="180" height="180">
                     </div>
                         <h3 class="profile-name">Giresse Kimona</h3>
                         <p class="profile-title">AutoMarket Pro</p>
@@ -121,7 +125,7 @@
     <section id="about" class="section about">
         <div class="container">
             <h2 class="section-title fade-in" data-fr="À propos de moi" data-en="About me">À propos de moi</h2>
-            <div class="about-content">
+            <div class="about-content cv-auto">
                 <div class="about-text fade-in">
                     <h3 data-fr="Qui je suis" data-en="Who I am">Qui je suis</h3>
                     <p data-fr="Je suis Giresse Kimona, fondateur d'AutoMarket Pro, une agence spécialisée dans le marketing digital automation. Passionné par la technologie et l'innovation, je combine mes compétences en développement web, intelligence artificielle et design pour créer des solutions sur mesure." data-en="I am Giresse Kimona, founder of AutoMarket Pro, an agency specialized in digital marketing automation. Passionate about technology and innovation, I combine my skills in web development, artificial intelligence and design to create tailor-made solutions.">
@@ -161,7 +165,7 @@
     <section id="services" class="section">
         <div class="container">
             <h2 class="section-title fade-in" data-fr="Mes Services" data-en="My Services">Mes Services</h2>
-            <div class="services-grid">
+            <div class="services-grid cv-auto">
                 <div class="service-card fade-in">
                     <div class="service-icon"><i class="fas fa-chart-line"></i></div>
                     <h3 data-fr="Marketing Digital" data-en="Digital Marketing">Marketing Digital</h3>
@@ -205,7 +209,7 @@
     <section id="projects" class="section projects">
         <div class="container">
             <h2 class="section-title fade-in" data-fr="Mes Projets" data-en="My Projects">Mes Projets</h2>
-            <div class="projects-grid">
+            <div class="projects-grid cv-auto">
                 <div class="project-card fade-in">
                     <div class="project-image">
                         <i class="fas fa-search"></i>
@@ -328,7 +332,7 @@
     <section id="gallery" class="section gallery">
         <div class="container">
             <h2 class="section-title fade-in" data-fr="Galerie" data-en="Gallery">Galerie</h2>
-            <div id="gallery-grid" class="gallery-grid fade-in" aria-live="polite"></div>
+            <div id="gallery-grid" class="gallery-grid fade-in cv-auto" aria-live="polite"></div>
         </div>
     </section>
 
@@ -336,7 +340,7 @@
     <section id="contact" class="section">
         <div class="container">
             <h2 class="section-title fade-in" data-fr="Me Contacter" data-en="Contact Me">Me Contacter</h2>
-            <div class="contact-content">
+            <div class="contact-content cv-auto">
                 <div class="contact-info fade-in">
                     <h3 data-fr="Parlons de votre projet" data-en="Let's talk about your project">Parlons de votre projet</h3>
                     <p data-fr="Prêt à transformer vos idées en réalité ? Contactez-moi pour discuter de votre projet et découvrir comment je peux vous aider." data-en="Ready to transform your ideas into reality? Contact me to discuss your project and discover how I can help you.">
@@ -867,6 +871,7 @@
             });
         }
 
+        // Render one gallery card with responsive sizing
         function renderGalleryItem(item) {
             const title = item.title || '';
             const alt = item.alt || title || 'Gallery image';
@@ -874,7 +879,7 @@
             const ratio = (item.width && item.height) ? (item.width + ' / ' + item.height) : '4 / 3';
             return `
             <figure class="gallery-item img-skeleton" style="aspect-ratio:${ratio}">
-                <img class="gallery-img img-blur" data-src="${item.src}" alt="${escapeHtml(alt)}" loading="lazy" decoding="async" />
+                <img class="gallery-img img-blur" data-src="${item.src}" alt="${escapeHtml(alt)}" loading="lazy" decoding="async" ${item.width ? `width=\"${item.width}\"` : ''} ${item.height ? `height=\"${item.height}\"` : ''} sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 100vw" />
                 <figcaption class="gallery-overlay">
                     <div class="gallery-meta">
                         <h4>${escapeHtml(title)}</h4>

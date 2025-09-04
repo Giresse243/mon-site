@@ -116,6 +116,45 @@ SENDGRID_API_KEY=your_api_key
 ```
 
 ## 📱 Responsive Design
+## ✏️ Modifier le contenu rapidement
+
+### Textes (FR/EN)
+- Les textes se trouvent dans `index.html` et utilisent des attributs `data-fr` et `data-en`.
+- Pour changer un libellé, modifiez les valeurs des attributs, par ex.:
+```html
+<h2 class="section-title" data-fr="Mes Projets" data-en="My Projects">Mes Projets</h2>
+```
+
+### Couleurs et styles
+- Ouvrez `style.css` et ajustez les variables dans `:root`:
+```css
+:root {
+    --primary-color: #8b5cf6; /* violet */
+    --secondary-color: #ec4899; /* rose */
+    --gradient-primary: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+}
+```
+
+### Images (Galerie/Portfolio)
+- Placez vos images dans `assets/gallery/` (gardez des fichiers JPG/PNG optimisés).
+- Mettez à jour `assets/data/gallery.json` en ajoutant des objets:
+```json
+{
+  "src": "assets/gallery/mon-projet.jpg",
+  "title": "Mon Projet",
+  "alt": "Capture écran du projet",
+  "tags": ["Web", "UI"],
+  "width": 1600,
+  "height": 1000
+}
+```
+- Les images sont chargées en lazy loading, avec grille responsive et overlay au survol.
+
+### Astuces de performance
+- Préservez les dimensions `width`/`height` dans le JSON pour éviter les CLS.
+- Gardez les images sous ~250KB quand c'est possible.
+- Évitez des tags trop longs pour garder l'overlay lisible.
+
 
 ### Breakpoints
 - **Mobile**: < 768px
