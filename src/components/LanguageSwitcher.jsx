@@ -4,7 +4,7 @@ import { loadLanguage } from '../utils/i18n';
 
 export default function LanguageSwitcher() {
   const { i18n } = useTranslation();
-  const [lang, setLang] = useState(i18n.language || 'fr');
+  const [lang, setLang] = useState(i18n.language || 'en');
 
   useEffect(() => {
     const stored = typeof window !== 'undefined' ? localStorage.getItem('language') : null;

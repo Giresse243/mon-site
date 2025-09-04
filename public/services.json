@@ -1,0 +1,6 @@
+[
+  {"icon":"fa-brush","title":{"en":"Web Design","fr":"Design Web"},"desc":{"en":"Modern, conversion-focused UI/UX.","fr":"UI/UX moderne orientée conversion."}},
+  {"icon":"fa-code","title":{"en":"Web Development","fr":"Développement Web"},"desc":{"en":"Robust sites and apps.","fr":"Sites et applications robustes."}},
+  {"icon":"fa-bullhorn","title":{"en":"Digital Marketing","fr":"Marketing Digital"},"desc":{"en":"SEO/paid growth strategies.","fr":"SEO et stratégies d'acquisition."}},
+  {"icon":"fa-robot","title":{"en":"Automation","fr":"Automation"},"desc":{"en":"Workflows and AI automations.","fr":"Workflows et automatisations IA."}}
+]

@@ -20,7 +20,7 @@ export default function HeroSection() {
         <AnimationWrapper delay={0.1}>
           <div className="mx-auto max-w-sm bg-white border rounded-2xl shadow-xl p-6 text-center">
             <div className="w-36 h-36 rounded-full bg-gradient-to-tr from-primary to-secondary mx-auto mb-4 grid place-items-center overflow-hidden">
-              <img src="/assets/giressekimona_image.jpg" alt="Portrait" className="w-32 h-32 rounded-full object-cover" />
+              <img src="/images/profile.jpg" alt="Portrait" className="w-32 h-32 rounded-full object-cover" />
             </div>
             <h3 className="text-xl font-semibold">Giresse Kimona</h3>
             <p className="text-slate-500">AutoMarket Pro</p>

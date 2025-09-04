@@ -8,4 +8,6 @@
     "ctaSecondary": "View my projects"
   },
   "about": {"title": "About me", "who": "Who I am"}
+  ,
+  "services": {"title": "Services"}
 }

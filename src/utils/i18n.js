@@ -7,16 +7,16 @@ async function fetchLocale(lang) {
 }
 
 const resources = {
-  fr: { translation: {} },
-  en: { translation: {} }
+  en: { translation: {} },
+  fr: { translation: {} }
 };
 
 i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: 'fr',
-    fallbackLng: 'fr',
+    lng: 'en',
+    fallbackLng: 'en',
     interpolation: { escapeValue: false }
   });
 
