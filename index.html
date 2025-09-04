@@ -18,7 +18,7 @@
     <meta name="twitter:title" content="Giresse Kimona | Développeur IA & Web - AutoMarket Pro">
     <meta name="twitter:description" content="Portfolio de Giresse Kimona, expert en développement web, intelligence artificielle et marketing digital automation.">
     <meta name="twitter:image" content="https://giressekimona.com/assets/giressekimona_image.jpg">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -490,10 +490,25 @@
 
         // Enhanced Scroll Animations
         function initializeAnimations() {
+            if (prefersReducedMotion()) {
+                // Reveal elements without animations
+                document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
+                    el.classList.add('visible');
+                });
+                return;
+            }
+
             const observerOptions = {
                 threshold: 0.1,
                 rootMargin: '0px 0px -50px 0px'
             };
+
+            // Pre-assign staggered delays
+            const animatedEls = Array.from(document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right'));
+            animatedEls.forEach((el, index) => {
+                const delayMs = Math.min(800, (index % 8) * 80);
+                el.style.transitionDelay = delayMs + 'ms';
+            });
 
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -503,9 +518,7 @@
                 });
             }, observerOptions);
 
-            document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
-                observer.observe(el);
-            });
+            animatedEls.forEach(el => observer.observe(el));
         }
 
         // Enhanced Scroll Effects
@@ -523,11 +536,13 @@
                         ? 'rgba(15, 23, 42, 0.98)' 
                         : 'rgba(255, 255, 255, 0.98)';
                     header.style.backdropFilter = 'blur(20px)';
+                    header.classList.add('compact');
                 } else {
                     header.style.background = currentTheme === 'dark' 
                         ? 'rgba(15, 23, 42, 0.95)' 
                         : 'rgba(255, 255, 255, 0.95)';
                     header.style.backdropFilter = 'blur(10px)';
+                    header.classList.remove('compact');
                 }
 
                 // Scroll progress indicator
@@ -537,7 +552,7 @@
                 }
 
                 // Parallax effect (only on desktop)
-                if (!isMobile()) {
+                if (!isMobile() && !prefersReducedMotion()) {
                     const hero = document.querySelector('.hero');
                     if (hero && scrolled < window.innerHeight) {
                         const rate = scrolled * -0.3;
@@ -703,7 +718,7 @@
         // Enhanced Floating Animation
         function initializeFloatingAnimation() {
             const profileCard = document.querySelector('.profile-card');
-            if (profileCard) {
+            if (profileCard && !prefersReducedMotion()) {
                 let direction = 1;
                 let currentY = 0;
                 
@@ -724,10 +739,12 @@
             // Skill cards hover effect
             document.querySelectorAll('.skill-card, .service-card, .project-card').forEach(card => {
                 card.addEventListener('mouseenter', function() {
+                    if (prefersReducedMotion()) return;
                     this.style.transform = 'translateY(-10px) scale(1.02)';
                 });
                 
                 card.addEventListener('mouseleave', function() {
+                    if (prefersReducedMotion()) return;
                     this.style.transform = 'translateY(0) scale(1)';
                 });
             });
@@ -735,10 +752,22 @@
             // Button click effects
             document.querySelectorAll('.btn').forEach(button => {
                 button.addEventListener('click', function() {
+                    if (prefersReducedMotion()) return;
                     this.style.transform = 'scale(0.95)';
                     setTimeout(() => {
                         this.style.transform = 'scale(1)';
                     }, 150);
+                });
+
+                // Track pointer for gradient glow on primary buttons
+                button.addEventListener('pointermove', (e) => {
+                    const target = e.currentTarget;
+                    if (!target.classList.contains('btn-primary')) return;
+                    const rect = target.getBoundingClientRect();
+                    const x = ((e.clientX - rect.left) / rect.width) * 100;
+                    const y = ((e.clientY - rect.top) / rect.height) * 100;
+                    target.style.setProperty('--x', x + '%');
+                    target.style.setProperty('--y', y + '%');
                 });
             });
         }
@@ -804,6 +833,10 @@
         // Utility Functions
         function isMobile() {
             return window.innerWidth <= 768;
+        }
+
+        function prefersReducedMotion() {
+            return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         }
 
         function debounce(func, wait) {
