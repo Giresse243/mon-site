@@ -42,7 +42,7 @@ cd mon-site
 # Installer les dépendances
 npm install
 
-# Démarrer le serveur de développement
+# Démarrer le serveur Next.js
 npm run dev
 ```
 
@@ -59,17 +59,23 @@ netlify deploy
 
 ```
 mon-site/
-├── index.html          # Page principale
-├── style.css           # Styles CSS avec variables CSS
-├── assets/             # Images et ressources
-│   ├── logo-gk-blue.png
-│   └── giressekimona_image.jpg
-├── api/                # API endpoints
-│   └── index.js        # Contact form handler
-├── scripts/            # Scripts utilitaires
-│   ├── deploy.js       # Script de déploiement
-│   └── seed-data.js    # Données de test
-├── netlify.toml        # Configuration Netlify
+├── pages/              # Pages Next.js
+│   ├── _app.js         # Layout global + i18n provider
+│   ├── _document.js    # Fonts & meta
+│   └── index.js        # Page d'accueil (sections)
+├── components/         # Composants réutilisables (Header, Hero, ...)
+├── public/             # Actifs statiques (images, JSON)
+│   └── assets/
+│       ├── new-logo.png
+│       ├── giressekimona_image.jpg
+│       └── data/gallery.json
+├── src/lib/i18n/       # Contexte et hooks i18n
+│   └── LanguageContext.js
+├── locales/            # Traductions JSON (fr/en)
+│   ├── fr.json
+│   └── en.json
+├── style.css           # Styles globaux (design Behance)
+├── next.config.js      # Config Next.js
 └── package.json        # Dépendances et scripts
 ```
 
@@ -117,6 +123,11 @@ SENDGRID_API_KEY=your_api_key
 
 ## 📱 Responsive Design
 ## ✏️ Modifier le contenu rapidement
+## 🎥 Animations (Framer Motion)
+- Les sections utilisent `components/Section.js` (apparition au scroll).
+- Les éléments du Hero et les transitions de page utilisent Framer Motion (voir `components/Hero.js`, `pages/_app.js`).
+- Pour ajuster la durée/relief: changez les props `duration`, `ease`.
+
 
 ### Textes (FR/EN)
 - Les textes se trouvent dans `index.html` et utilisent des attributs `data-fr` et `data-en`.
@@ -136,11 +147,11 @@ SENDGRID_API_KEY=your_api_key
 ```
 
 ### Images (Galerie/Portfolio)
-- Placez vos images dans `assets/gallery/` (gardez des fichiers JPG/PNG optimisés).
-- Mettez à jour `assets/data/gallery.json` en ajoutant des objets:
+- Placez vos images dans `public/assets/gallery/` (JPG/PNG optimisés).
+- Mettez à jour `public/assets/data/gallery.json` en ajoutant des objets:
 ```json
 {
-  "src": "assets/gallery/mon-projet.jpg",
+  "src": "/assets/gallery/mon-projet.jpg",
   "title": "Mon Projet",
   "alt": "Capture écran du projet",
   "tags": ["Web", "UI"],
@@ -151,6 +162,19 @@ SENDGRID_API_KEY=your_api_key
 - Les images sont chargées en lazy loading, avec grille responsive et overlay au survol.
 
 ### Astuces de performance
+
+## 🌐 Langues: ajouter/modifier
+- Ajoutez un fichier `locales/es.json` (ex.) avec la même structure que `fr.json`.
+- Ajoutez le code langue dans `next.config.js` (`i18n.locales`).
+- La bascule se fait via le bouton de langue dans le header (stocké en localStorage).
+
+## 🖼️ Images
+- Placez vos images sous `public/assets/`. Celles de la galerie: `public/assets/gallery/`.
+- Mettez à jour `public/assets/data/gallery.json`. Chaque entrée peut inclure `width`/`height` pour de meilleures perfs.
+
+## 📝 Textes/Couleurs
+- Textes: modifiez `locales/fr.json` et `locales/en.json`.
+- Couleurs: variables dans `style.css` (`--primary-color`, `--secondary-color`, `--gradient-primary`).
 - Préservez les dimensions `width`/`height` dans le JSON pour éviter les CLS.
 - Gardez les images sous ~250KB quand c'est possible.
 - Évitez des tags trop longs pour garder l'overlay lisible.
